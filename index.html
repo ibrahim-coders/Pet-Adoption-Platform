@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <!-- Google Font Link -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <!-- icon link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <title>Pet Adoption Platform</title>
+</head>
+
+<style>
+  .active {
+    border-radius: 30px;
+    background-color: #0E7A81;
+    color: white;
+  }
+</style>
+
+<body class="font-sans">
+  <!-- Header -->
+  <header class="max-w-screen-xl container w-11/12 mx-auto py-4">
+    <nav class="flex items-center justify-between">
+      <!-- Logo and Title -->
+      <div class="flex items-center space-x-3">
+        <img src="Image/logo (1).webp" alt="Peddy Logo" class="w-10 h-10">
+        <h2 class="text-2xl font-bold text-gray-800">Peddy</h2>
+      </div>
+
+      <!-- Navbar Links -->
+      <ul id="menu" class="hidden lg:flex space-x-8">
+        <li><a href="#" class=" text-xl font-semibold hover:text-blue-500">Home</a></li>
+        <li><a href="#" class="text-xl font-semibold hover:text-blue-500">Shop</a></li>
+        <li><a href="#" class="text-xl font-semibold hover:text-blue-500">Contact</a></li>
+      </ul>
+      <div class="flex gap-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="lg:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      </ul>
+
+      <!-- Mobile Menu  -->
+      <ul id="mobile-menu"
+        class="lg:hidden absolute top-16 left-0 w-full bg-white shadow-md  hidden flex-col items-center space-y-4 py-4 ">
+        <li><a href="#" class="text-xl font-semibold block text-center hover:text-blue-500">Home</a></li>
+        <li><a href="#" class=" text-xl font-semibold block text-center hover:text-blue-500">Shop</a></li>
+        <li><a href="#" class="text-xl font-semibold block text-center hover:text-blue-500">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- End Navbar-->
+
+  <main class="max-w-screen-xl mx-auto mt-10">
+
+    <!-- Banner Section -->
+    <section class="w-11/12 md:w-8/12 lg:w-6/12 mx-auto py-8">
+
+      <div class="text-center">
+        <h5 class="text-lg md:text-xl lg:text-2xl text-gray-800 font-medium text-center">
+          Bringing Families Together ❤️‍
+        </h5>
+        <h1 class="text-2xl lg:text-5xl text-gray-800 font-bold text-center my-4 line-hight-[20px]">
+          Your Path to Adoption Starts Here
+        </h1>
+
+
+        <p class="text-base md:text-lg lg:text-xl text-gray-800 text-center mb-6">
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking
+          at
+          its
+          layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+
+
+        <a href="#btn-container"><button class="btn btn-success text-xl text-white my-4">View More</button></a>
+      </div>
+      <!-- Image -->
+      <img src="Image/pet.webp" alt="Pet" class="w-full h-auto ">
+    </section>
+
+
+    <!-- . Adopt Your Best Friend Section -->
+    <section class=" mx-auto">
+      <div class="mx:6  mx-auto text-center">
+        <h2 class="text-2xl text-gray-800 text-center font-bold">Adopt Your Best Friend</h2>
+        <p class=" max-w-xl ext-base md:text-lg lg:text-xl text-gray-800 text-center mb-6 px-8">It is a long established
+          fact that a reader
+          will be distracted
+          by the readable content of page when looking at its
+          layout. The point of using Lorem Ipsum is that it has a.</p>
+      </div>
+
+      <!-- Fetch All Pet Categorie dinamic part -->
+      <div id="btn-container" class=" mx-auto grid grid-cols-2  lg:grid-cols-4 gap-4 my-10">
+
+
+      </div>
+      <div id="loading-container" class="hidden text-center">
+
+        <span class="loading loading-spinner text-success loading-lg mt-2"></span>
+      </div>
+
+    </section>
+
+    <section class="w-11/12 mx-auto">
+      <div class="w-full flex flex-col md:flex-row md:justify-between items-center text-center my-10">
+        <h3 class="text-gray-800 text-2xl font-bold mb-4 md:mb-0">Best Deal For You</h3>
+        <button id="sort-btn" class="btn bg-green-600 text-white text-xl hover:text-black py-2 px-4 rounded-md">
+          Sort by Price
+        </button>
+      </div>
+
+
+      <div class=" grid grid-cols-1 md:grid-cols-4 my-8 mx-auto">
+
+        <div id="pet-all" class="col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6 mx-auto">
+
+
+
+        </div>
+
+        <div id="pets-img"
+          class="w-full col-span-1 grid grid-flow-row auto-rows-max  text-center grid-cols-1 sm:grid-cols-2  my-6 rounded-lg shadow-[rgba(0,0,0,0.24)_0px_3px_8px] mx-2 ">
+
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!--adopt Modal Component -->
+  <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full max-w-md mx-auto">
+      <i class='bx bx-money-withdraw text-center text-2xl text-yellow-600 py-2'></i>
+      <h2 id="modalHeader" class="text-3xl text-center font-bold text-green-800 py-2">
+        Congratulations
+      </h2>
+
+      <p class="text-center text-xl ">Adoption Proces is Start for your Pet</p>
+      <h2 id="demo" class="text-gray-600 mt-4 text-2xl font-bold text-center py-2 "> </h2>
+      <h2></h2>
+    </div>
+  </div>
+
+
+
+  <!-- details modal -->
+  <button id="show-petDetalis" class="btn hidden" onclick="petDetalis.showModal()">open modal</button>
+  <dialog id="petDetalis" class="modal">
+    <div class="modal-box">
+      <div id="pets-allContent"></div>
+
+      <div class="modal-action">
+        <form method="dialog">
+
+          <!-- <button class="btn">Close</button> -->
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+
+  <!-- footer -->
+
+  <footer
+    class="w-full max-w-screen-xl p-6 flex flex-col sm:flex-row lg:p-10 bg-gray-800 text-white mx-auto justify-between items-center gap-8">
+    <nav class="my-4 md:my-2 w-full sm:w-auto text-center sm:text-left">
+      <div class="flex items-center space-x-3 pb-4 justify-center sm:justify-start">
+        <img src="Image/logo (1).webp" alt="Peddy Logo" class="w-10 h-10">
+        <h2 class="text-2xl font-bold text-white">Peddy</h2>
+      </div>
+      <p class="text-white font-medium">Location: av. Washington 165, NY CA 54003</p>
+      <p class="text-white font-medium">Phone: +31 85 964 47 25</p>
+      <p class="text-white font-medium">Email: info@yourdomain.com</p>
+      <p class="text-white font-medium">Opening hours: 9.00 AM - 5.00 PM</p>
+
+      <div class="flex gap-4 my-4 justify-center sm:justify-start">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="fill-current text-cyan-600">
+            <path
+              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+            </path>
+          </svg>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="fill-current text-red-600">
+            <path
+              d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+            </path>
+          </svg>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="fill-current text-sky-400">
+            <path
+              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+            </path>
+          </svg>
+        </a>
+        <a href="#"><i class='bx bxl-instagram-alt text-3xl text-red-400'></i></a>
+      </div>
+    </nav>
+
+    <nav class="mb-4 flex flex-col text-center gap-2 w-full sm:w-auto">
+      <h6 class="footer-title text-lg font-semibold mb-2">Useful Links</h6>
+      <a href="#" class="link link-hover">Home</a>
+      <a href="#" class="link link-hover">About Us</a>
+      <a href="#" class="link link-hover">Animals</a>
+      <a href="#" class="link link-hover">Foundation</a>
+      <a href="#" class="link link-hover">Contact</a>
+    </nav>
+
+    <nav class="">
+      <h6 class="footer-title text-lg font-semibold mb-2">Drop a Message</h6>
+      <input type="email" placeholder="Enter your email" class="input input-bordered bg-slate-600 w-full max-w-xs" />
+      <button class="btn btn-success mt-4 w-full ">Subscribe</button>
+    </nav>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

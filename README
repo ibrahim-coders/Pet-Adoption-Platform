@@ -1,0 +1,20 @@
+# Pet Adoption Platform
+
+A dynamic and responsive platform for finding pets to adopt, using the Peddy API to fetch pet data. Users can browse available pets, view details for each pet, and sort or filter based on various categories. The platform is optimized for different devices with a responsive design built with Tailwind CSS.
+
+## Key Features
+- **Arrow Functions**: Used for concise and clean function definitions.
+- **Template Literals**: Easily manipulate and display strings with embedded expressions.
+- **Destructuring Assignment**: Simplifies the extraction of data from arrays and objects.
+- **Promises and Async/Await**: Handle asynchronous operations smoothly with modern JavaScript features.
+- **forEach Loop**: Used for efficient iteration through elements.
+
+## ES6 Features Used
+1. Arrow functions
+2. Template literals
+3. Destructuring assignment
+4. Promises and async/await
+5. forEach
+
+## Live Demo
+https://petss-adoptions.netlify.app/
